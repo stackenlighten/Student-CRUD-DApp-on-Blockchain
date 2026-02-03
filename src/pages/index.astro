@@ -1,17 +1,16 @@
 ---
-
+import StudentManager from '../components/StudentManager.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Optional: npm install bootstrap
 ---
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<head><title>Student Blockchain DApp</title></head>
+<body style="background: #121212; color: white;">
+  <nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container"><span class="navbar-brand">Student Ledger</span></div>
+  </nav>
+  
+  <main>
+    <StudentManager client:load />
+  </main>
+</body>
 </html>
