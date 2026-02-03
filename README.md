@@ -1,6 +1,6 @@
 # Astro BSC Student DApp 🎓
 
-A high-performance Decentralized Application (DApp) built with **Astro.js** and **React**, allowing a manager to maintain student records on the **Binance Smart Chain (BSC) Testnet**.
+A Simple Decentralized Application built with **Astro.js** and **React**, allowing a manager to maintain student records on the **Binance Smart Chain (BSC) Testnet**. 
 
 ## 🚀 Overview
 This project migrates a standard HTML/Web3 interface into a modern **Islands Architecture**. It interacts with a Solidity smart contract to perform full CRUD (Create, Read, Update, Delete) operations on student data.
