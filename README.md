@@ -1,43 +1,34 @@
-# Astro Starter Kit: Minimal
+# Astro BSC Student DApp 🎓
 
-```sh
-npm create astro@latest -- --template minimal
-```
+A high-performance Decentralized Application (DApp) built with **Astro.js** and **React**, allowing a manager to maintain student records on the **Binance Smart Chain (BSC) Testnet**.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Overview
+This project migrates a standard HTML/Web3 interface into a modern **Islands Architecture**. It interacts with a Solidity smart contract to perform full CRUD (Create, Read, Update, Delete) operations on student data.
 
-## 🚀 Project Structure
+## 🛠️ Features
+- **Smart Contract Integration**: Connects to `Students.sol` for secure data storage.
+- **React Islands**: Interactive UI components that hydrate only when needed.
+- **Dynamic Form**: A single form that toggles between "Add" and "Update" modes.
+- **Instant UI Updates**: Uses React `useState` to refresh the student table immediately after transactions.
+- **Field Auto-Clear**: Automatically resets input fields upon successful blockchain confirmation.
+- **Network Guard**: Detects and prompts a switch to BSC Testnet (Chain ID 97).
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🏗️ Technical Stack
+- **Frontend**: Astro.js, React, Bootstrap 5.
+- **Blockchain**: Solidity (^0.8.3), Web3.js.
+- **Network**: BSC Testnet.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 📋 Smart Contract (Students.sol)
+The contract governs the rules of the registry:
+- **`owner`**: Only the deployer can add or modify records.
+- **`students` mapping**: Stores student profiles (ID, Name, Age, Class, Exists).
+- **`createStudent`**: Adds a new record to the blockchain.
+- **`updateStudent`**: Modifies existing student details via their ID.
+- **`removeStudent`**: Performs a soft-delete by setting the `exists` flag to false.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🔧 Installation
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/stackenlighten/Student-CRUD-DApp-on-Blockchain.git
+   cd Student-CRUD-DApp-on-Blockchain
